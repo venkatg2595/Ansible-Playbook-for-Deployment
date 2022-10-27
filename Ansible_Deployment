@@ -1,0 +1,22 @@
+hosts: 1.1.1.1
+  connection: local
+  tasks:
+   - name: download jar
+     get_url:
+       url: 
+       dest: 
+
+   - name: Unzip jar
+     unarchive: 
+       src=
+       dest=
+       setype=jar
+       copy=no
+
+  - name: Copy the files 
+      copy:
+      src: 
+      dest: 
+      owner: root
+      group: root
+      mode: 0755
