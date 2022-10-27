@@ -1,22 +1,22 @@
-hosts: 1.1.1.1
+hosts: localhost
   connection: local
   tasks:
    - name: download jar
-     get_url:
-       url: 
-       dest: 
+     get_url: 
+       url: sample.uas.simplewabfragment-1.0.0-sources.jar
+       dest: var/lib 
 
    - name: Unzip jar
      unarchive: 
-       src=
-       dest=
+       src= var/lib
+       dest= var/lib/jenkins
        setype=jar
        copy=no
 
   - name: Copy the files 
       copy:
-      src: 
-      dest: 
+      src: var/lib/jenkins
+      dest: var/lib/jenkins
       owner: root
       group: root
       mode: 0755
